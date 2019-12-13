@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rect</title>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+
+    if (canvas.getContext) {
+      const ctx = canvas.getContext('2d');
+      ctx.fillRect(25, 25, 100, 100);
+      ctx.clearRect(45, 45, 60, 60);
+      ctx.strokeRect(50, 50, 50, 50);
+
+      // 三角形
+      ctx.beginPath();
+      ctx.moveTo(150, 50);
+      ctx.lineTo(200, 25);
+      ctx.lineTo(200, 70);
+      ctx.fill();
+
+    }
+  </script>
+</body>
+</html>
