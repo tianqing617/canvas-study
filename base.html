@@ -11,10 +11,14 @@
 
   <script>
     const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
 
-    ctx.fillStyle = 'green';
-    ctx.fillRect(10, 10, 150, 100);
+    // 判断浏览器是否支持canvas
+    if (canvas.getContext) {
+      const ctx = canvas.getContext('2d');
+  
+      ctx.fillStyle = 'green';
+      ctx.fillRect(10, 10, 150, 100);
+    }
   </script>
 </body>
 </html>
