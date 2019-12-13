@@ -18,13 +18,20 @@
       ctx.clearRect(45, 45, 60, 60);
       ctx.strokeRect(50, 50, 50, 50);
 
-      // 三角形
+      // 填充三角形
       ctx.beginPath();
       ctx.moveTo(150, 50);
       ctx.lineTo(200, 25);
       ctx.lineTo(200, 70);
       ctx.fill();
 
+      // 描边三角形
+      ctx.beginPath();
+      ctx.moveTo(150, 100);
+      ctx.lineTo(200, 75);
+      ctx.lineTo(200, 125);
+      ctx.closePath();
+      ctx.stroke();
     }
   </script>
 </body>
